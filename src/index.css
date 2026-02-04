@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Outfit:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* African-inspired warm palette */
+    --background: 35 30% 97%;
+    --foreground: 25 25% 15%;
+
+    --card: 35 25% 95%;
+    --card-foreground: 25 25% 15%;
+
+    --popover: 35 30% 97%;
+    --popover-foreground: 25 25% 15%;
+
+    /* Terracotta/Rust primary */
+    --primary: 15 65% 50%;
+    --primary-foreground: 35 30% 97%;
+
+    /* Warm cream secondary */
+    --secondary: 35 35% 90%;
+    --secondary-foreground: 25 25% 20%;
+
+    --muted: 35 20% 92%;
+    --muted-foreground: 25 15% 45%;
+
+    /* Gold accent */
+    --accent: 38 85% 55%;
+    --accent-foreground: 25 25% 15%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 30 20% 85%;
+    --input: 30 20% 85%;
+    --ring: 15 65% 50%;
+
+    --radius: 0.5rem;
+
+    /* Custom design tokens */
+    --terracotta: 15 65% 50%;
+    --terracotta-dark: 15 70% 40%;
+    --gold: 38 85% 55%;
+    --gold-light: 42 80% 70%;
+    --cream: 35 30% 97%;
+    --cream-dark: 35 25% 92%;
+    --earth-brown: 25 30% 25%;
+    --earth-brown-light: 25 20% 40%;
+    --olive: 85 25% 40%;
+    --olive-light: 85 20% 55%;
+
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(15 65% 50% / 0.95) 0%, hsl(25 60% 35% / 0.95) 100%);
+    --gradient-gold: linear-gradient(135deg, hsl(38 85% 55%) 0%, hsl(42 80% 70%) 100%);
+    --gradient-warm: linear-gradient(180deg, hsl(35 30% 97%) 0%, hsl(35 25% 92%) 100%);
+
+    /* Shadows */
+    --shadow-soft: 0 4px 20px -4px hsl(25 30% 25% / 0.12);
+    --shadow-card: 0 8px 30px -8px hsl(25 30% 25% / 0.15);
+    --shadow-elevated: 0 20px 50px -15px hsl(25 30% 25% / 0.2);
+
+    /* Typography */
+    --font-display: 'Playfair Display', serif;
+    --font-body: 'Outfit', sans-serif;
+
+    --sidebar-background: 35 25% 95%;
+    --sidebar-foreground: 25 25% 15%;
+    --sidebar-primary: 15 65% 50%;
+    --sidebar-primary-foreground: 35 30% 97%;
+    --sidebar-accent: 35 35% 90%;
+    --sidebar-accent-foreground: 25 25% 15%;
+    --sidebar-border: 30 20% 85%;
+    --sidebar-ring: 15 65% 50%;
+  }
+
+  .dark {
+    --background: 25 25% 10%;
+    --foreground: 35 25% 95%;
+
+    --card: 25 25% 12%;
+    --card-foreground: 35 25% 95%;
+
+    --popover: 25 25% 10%;
+    --popover-foreground: 35 25% 95%;
+
+    --primary: 15 60% 55%;
+    --primary-foreground: 25 25% 10%;
+
+    --secondary: 25 20% 18%;
+    --secondary-foreground: 35 25% 95%;
+
+    --muted: 25 20% 18%;
+    --muted-foreground: 35 15% 65%;
+
+    --accent: 38 80% 50%;
+    --accent-foreground: 25 25% 10%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 25 20% 20%;
+    --input: 25 20% 20%;
+    --ring: 15 60% 55%;
+
+    --sidebar-background: 25 25% 12%;
+    --sidebar-foreground: 35 25% 95%;
+    --sidebar-primary: 15 60% 55%;
+    --sidebar-primary-foreground: 25 25% 10%;
+    --sidebar-accent: 25 20% 18%;
+    --sidebar-accent-foreground: 35 25% 95%;
+    --sidebar-border: 25 20% 20%;
+    --sidebar-ring: 15 60% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display;
+  }
+}
+
+@layer components {
+  .text-gradient-gold {
+    @apply bg-clip-text text-transparent;
+    background-image: var(--gradient-gold);
+  }
+
+  .bg-hero-gradient {
+    background: var(--gradient-hero);
+  }
+
+  .shadow-soft {
+    box-shadow: var(--shadow-soft);
+  }
+
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+
+  .shadow-elevated {
+    box-shadow: var(--shadow-elevated);
+  }
+
+  /* African pattern overlay */
+  .pattern-african {
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M30 0L45 15L30 30L15 15L30 0zM30 30L45 45L30 60L15 45L30 30z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  }
+
+  .pattern-dots {
+    background-image: radial-gradient(hsl(var(--primary) / 0.1) 1px, transparent 1px);
+    background-size: 20px 20px;
+  }
+}
+
+@layer utilities {
+  .animate-fade-up {
+    animation: fadeUp 0.6s ease-out forwards;
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-out forwards;
+  }
+
+  .animate-scale-in {
+    animation: scaleIn 0.4s ease-out forwards;
+  }
+
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  .animate-pulse-slow {
+    animation: pulse 3s ease-in-out infinite;
+  }
+
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes scaleIn {
+    from {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  .delay-100 { animation-delay: 0.1s; }
+  .delay-200 { animation-delay: 0.2s; }
+  .delay-300 { animation-delay: 0.3s; }
+  .delay-400 { animation-delay: 0.4s; }
+  .delay-500 { animation-delay: 0.5s; }
+}
+
+/* Khatiex Designs - Professional Brand Shield
+  Removes all third-party AI platform branding 
+*/
+[id*="lovable"], 
+[class*="lovable"], 
+[data-lovable-badge],
+a[href*="lovable.dev"],
+a[href*="gptengineer.app"],
+.fixed.bottom-4.right-4.z-50 { 
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  height: 0 !important;
+  width: 0 !important;
+}
