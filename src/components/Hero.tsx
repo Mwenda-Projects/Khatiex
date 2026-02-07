@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { MessageCircle, ArrowRight } from "lucide-react";
-import heroImage from "@/assets/hero-model.jpg";
+import heroImage from "@/assets/hero-model.jpeg";
 
 const Hero = () => {
   const scrollToGallery = () => {

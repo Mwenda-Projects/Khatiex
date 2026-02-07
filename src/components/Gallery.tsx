@@ -3,16 +3,23 @@ import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { ChevronDown } from "lucide-react";
 
-import galleryDress1 from "@/assets/gallery-dress-1.jpg";
+import galleryDress1 from "@/assets/gallery-dress-1.jpeg";
 import galleryDress2 from "@/assets/gallery-dress-2.jpg";
 import galleryDress3 from "@/assets/gallery-dress-3.jpg";
 import galleryOutfit1 from "@/assets/gallery-outfit-1.jpg";
 import galleryShirt1 from "@/assets/gallery-shirt-1.jpg";
 import galleryBlazer1 from "@/assets/gallery-blazer-1.jpg";
 import galleryCouple from "@/assets/gallery-couple.jpg";
-import galleryKids from "@/assets/gallery-kids.jpg";
+import galleryKids from "@/assets/gallery-kids.jpeg";
 import galleryHeadwrap1 from "@/assets/gallery-headwrap-1.jpg";
 import galleryFamily1 from "@/assets/gallery-family-1.jpg";
+import galleryDress4 from "@/assets/gallery-dress-4.jpg";
+import galleryKids2 from "@/assets/gallery-kids-2.jpeg";
+import galleryCurstain1 from "@/assets/gallery-curtain-1.jpeg";
+import galleryCurtain2 from "@/assets/gallery-curtain-2.jpeg";
+import galleryBedding1 from "@/assets/gallery-beddings-1.jpeg";
+import galleryBedding2 from "@/assets/gallery-beddings-2.jpeg";
+import galleryOutfit from "@/assets/gallery-outfit.jpeg";
 
 const galleryItems = [
   { 
@@ -20,21 +27,21 @@ const galleryItems = [
     image: galleryDress1, 
     title: "Terracotta Elegance", 
     category: "Dresses",
-    description: "A stunning floor-length Vitenge dress in warm terracotta tones, perfect for formal occasions and celebrations."
+    description: "A stunning outdoor Vitenge dress in warm terracotta tones, perfect for formal occasions and celebrations."
   },
   { 
     id: 2, 
-    image: galleryDress2, 
-    title: "Royal Blue Gown", 
-    category: "Dresses",
-    description: "Elegant royal blue Ankara gown with intricate patterns, ideal for weddings and special events."
+    image: galleryBedding1, 
+    title: "The Artisan Suite", 
+    category: "Home Decor",
+    description: "Prinstine white cotton bedding with precision-tailored mitered corners, ideal for luxury hospitality and refined interiors."
   },
   { 
     id: 3, 
-    image: galleryOutfit1, 
-    title: "Forest Wrap Dress", 
+    image: galleryOutfit, 
+    title: "Tailored Elegance", 
     category: "Outfits",
-    description: "Modern wrap-style dress in rich forest green, combining traditional prints with contemporary design."
+    description: "A masterpiece of structural tailoring, featuring a precision-contoured bodice and a seamless full-circle skirt for a dramatic, elegant drape."
   },
   { 
     id: 4, 
@@ -53,9 +60,9 @@ const galleryItems = [
   { 
     id: 6, 
     image: galleryKids, 
-    title: "Little Princess", 
+    title: "Little Angles", 
     category: "Kids",
-    description: "Adorable children's Vitenge dress with playful patterns, designed for comfort and style."
+    description: "cute children's Vitenge dress with playful patterns, designed for comfort and style."
   },
   { 
     id: 7, 
@@ -84,6 +91,7 @@ const galleryItems = [
     title: "Mother-Daughter Set", 
     category: "Family",
     description: "Matching mother and daughter dresses in beautiful pink Vitenge fabric, perfect for family occasions."
+  
   },
 ];
 
