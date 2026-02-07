@@ -1,5 +1,5 @@
 import { Heart, Award, Clock, Sparkles } from "lucide-react";
-import aboutImage from "@/assets/about-craftsman.jpeg";
+import aboutImage from "@/assets/about-craftsman.jpg";
 
 const highlights = [
   { icon: Heart, label: "Made with Love" },
